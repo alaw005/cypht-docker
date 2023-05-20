@@ -19,14 +19,16 @@ services:
     environment:
       - CYPHT_AUTH_USERNAME=admin
       - CYPHT_AUTH_PASSWORD=admin_password
+      - CYPHT_ADMIN_USERS=admin
       - CYPHT_DB_CONNECTION_TYPE=host
       - CYPHT_DB_HOST=db
       - CYPHT_DB_NAME=cypht
       - CYPHT_DB_USER=cypht
       - CYPHT_DB_PASS=cypht_password
       - CYPHT_SESSION_TYPE=DB
-    volumes:
-      - cypht-users:/var/lib/hm3/users
+      - CYPHT_USER_CONFIG_TYPE=DB
+    #volumes:
+    #  - cypht-users:/var/lib/hm3/users
 
 volumes:
     cypht-db:
